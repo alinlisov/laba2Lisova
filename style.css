@@ -1,0 +1,214 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #222;
+    margin-bottom: 30px;
+}
+
+.task-section {
+    background: #ffffff;
+    width: 90%;
+    max-width: 1000px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-section h2 {
+    color: #048f8f;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
+
+   
+/* СТИЛІ ЗАВДАННЯ 1*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 850px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+td {
+    border: 2px solid #333;
+    padding: 15px 5px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    font-weight: bold;
+    width: 140px;
+}
+
+/* 1-й рядок: 04-вар */
+.row-1 {
+    background-color: #048f8f;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.row-1:hover {
+    background-color: #f5f504;
+    color: #000000;
+}
+
+/* 2-й рядок */
+.row-2 {
+    background-color: #f5f504;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.row-2:hover {
+    background-color: #048f8f;
+    color: #ffffff;
+}
+
+/* 3-й рядок */
+.row-3 {
+    background-color: #ffffff;
+    height: 45px;
+}
+
+/* СТИЛІ ЗАВДАННЯ 2*/
+.target-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.target-card {
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.target-card h3 {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* --- 2.1 Через POSITION --- */
+.target-position {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.target-position .outer-ring {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border: 25px solid #000;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.target-position .inner-circle {
+    position: absolute;
+    top: 65px;
+    left: 65px;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.target-position .line-h {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 180px;
+    height: 10px;
+    background-color: #000;
+    z-index: 1;
+}
+
+.target-position .line-v {
+    position: absolute;
+    top: 0;
+    left: 85px;
+    width: 10px;
+    height: 180px;
+    background-color: #000;
+    z-index: 1;
+}
+
+/* --- 2.2 Через TRANSFORM --- */
+.target-transform {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.target-transform .ring-and-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle, 
+        #000 0px, 
+        #000 25px, 
+        transparent 26px, 
+        transparent 50px, 
+        #000 51px, 
+        #000 75px
+    );
+    z-index: 2;
+}
+
+.target-transform .cross-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #000;
+    z-index: 1;
+}
+
+.target-transform .h-line {
+    width: 180px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.target-transform .v-line {
+    width: 180px;
+    height: 10px;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
